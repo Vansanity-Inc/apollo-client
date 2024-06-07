@@ -593,7 +593,6 @@ class InternalState<TData, TVariables extends OperationVariables> {
             this.onError(error);
           } else if (
             result.data &&
-            previousResult?.networkStatus !== result.networkStatus &&
             result.networkStatus === NetworkStatus.ready
           ) {
             this.onCompleted(result.data);
